@@ -1,16 +1,15 @@
-import { Vector2 } from "three";
-import { PlayerActions } from "./PlayerActions";
+import { PlayerActions } from "../common/PlayerActions";
 import {
-  vw,
-  PlayerData,
-  PeersistentData,
   IdleData,
-  Transform,
+  PeersistentData,
+  PlayerData,
   TouchingData,
-} from "./PlayerData";
+  Transform,
+} from "../common/PlayerData";
+import { V2, V2O } from "../common/v2";
 
 export class PlayerController {
-  static readonly MAX_CIRCLE_RADIUS = 10 * vw;
+  static readonly MAX_CIRCLE_RADIUS = 100;
   static readonly MIN_CIRCLE_RADIUS = 5;
   static readonly SPEED = 100;
 
@@ -102,91 +101,62 @@ export class PlayerController {
     playerData: PeersistentData & IdleData,
     deltaTime: number
   ): Transform {
+    const { position, rotation } = PlayerController.rotateAround(
+      playerData,
+      playerData.idleTarget,
+      deltaTime
+    );
+
+    return { position, rotation };
+  }
+
+  private static rotateAround(
+    playerData: PlayerData,
+    target: V2,
+    deltaTime: number
+  ): Transform {
     const {
-      idleTarget,
       transform: { position },
       rotationDirection,
     } = playerData;
+    const directionToTarget = V2O.subtract(position, target);
+    const unitToTarget = V2O.normalise(directionToTarget);
 
-    const directionToTarget = objectToVector2(position)
-      .clone()
-      .sub(objectToVector2(idleTarget));
-    const unitToTarget = directionToTarget.clone().normalize();
+    const rotatedUnit = V2O.rotate(
+      unitToTarget,
+      rotationDirection === "CLOCKWISE" ? -1 : 1
+    );
+    const scaledUnit = V2O.scale(rotatedUnit, this.MAX_CIRCLE_RADIUS);
+    const rotatedTarget = V2O.add(target, scaledUnit);
 
-    const rotatedTarget = unitToTarget
-      .clone()
-      .rotateAround(
-        new Vector2(0, 0),
-        rotationDirection === "CLOCKWISE" ? -1 : 1
-      )
-      .multiplyScalar(this.MAX_CIRCLE_RADIUS)
-      .add(objectToVector2(idleTarget));
+    const directionToCircleTarget = V2O.subtract(rotatedTarget, position);
+    const unitToCircleTarget = V2O.normalise(directionToCircleTarget);
 
-    const directionToCircleTarget = rotatedTarget
-      .clone()
-      .sub(objectToVector2(position));
-    const unitToCircleTarget = directionToCircleTarget.clone().normalize();
-
-    const step = unitToCircleTarget
-      .clone()
-      .multiplyScalar(this.SPEED)
-      .multiplyScalar(deltaTime);
-    const nextPosition = step.clone().add(objectToVector2(position));
+    const step = V2O.scale(unitToCircleTarget, this.SPEED * deltaTime);
+    const nextPosition = V2O.add(step, position);
 
     const rotation = lerpTheta(
       playerData.transform.rotation,
-      unitToCircleTarget.angle(),
+      V2O.angle(unitToCircleTarget),
       0.1
     );
+
     return { position: nextPosition, rotation };
   }
+
   private static updateTouching(
     playerData: PeersistentData & TouchingData,
     deltaTime: number
   ): Transform {
-    const {
-      touchPosition,
-      transform: { position },
-      rotationDirection,
-    } = playerData;
-
-    const directionToTarget = objectToVector2(position)
-      .clone()
-      .sub(objectToVector2(touchPosition));
-    const unitToTarget = directionToTarget.clone().normalize();
-
-    const rotatedTarget = unitToTarget
-      .clone()
-      .rotateAround(
-        new Vector2(0, 0),
-        rotationDirection === "CLOCKWISE" ? -1 : 1
-      )
-      .multiplyScalar(this.MAX_CIRCLE_RADIUS)
-      .add(objectToVector2(touchPosition));
-
-    const directionToCircleTarget = rotatedTarget
-      .clone()
-      .sub(objectToVector2(position));
-    const unitToCircleTarget = directionToCircleTarget.clone().normalize();
-
-    const step = unitToCircleTarget
-      .clone()
-      .multiplyScalar(this.SPEED)
-      .multiplyScalar(deltaTime);
-    const nextPosition = step.clone().add(objectToVector2(position));
-
-    const rotation = lerpTheta(
-      playerData.transform.rotation,
-      unitToCircleTarget.angle(),
-      0.2
+    const { position, rotation } = PlayerController.rotateAround(
+      playerData,
+      playerData.touchPosition,
+      deltaTime
     );
-    return { position: nextPosition, rotation };
+
+    return { position, rotation };
   }
 }
-
-const objectToVector2 = ({ x, y }: { x: number; y: number }) => {
-  return new Vector2(x, y);
-};
 
 function lerp(from: number, to: number, amount: number): number {
   amount = amount < 0 ? 0 : amount;

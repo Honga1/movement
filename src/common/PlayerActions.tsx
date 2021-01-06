@@ -1,16 +1,18 @@
+import { V2 } from "./v2";
+
 export type PlayerActions = {
   id: string;
 } & (
   | {
       type: "TOUCH_DOWN";
-      position: { x: number; y: number };
+      position: V2;
     }
   | {
       type: "TOUCH_UP";
-      position: { x: number; y: number };
+      position: V2;
     }
   | {
       type: "TOUCH_MOVE";
-      position: { x: number; y: number };
+      position: V2;
     }
 );

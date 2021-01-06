@@ -1,4 +1,4 @@
-import { PlayerActions } from "./PlayerActions";
+import { PlayerActions } from "../common/PlayerActions";
 
 export function* generateReplayDatum(offset: number) {
   let nextIndex = offset;
@@ -12,801 +12,501 @@ export const replayData: PlayerActions[] = [
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -351,
-      y: 111,
-    },
+    position: [-351, 111],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -389,
-      y: 65,
-    },
+    position: [-389, 65],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -391,
-      y: 55,
-    },
+    position: [-391, 55],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -389,
-      y: 54,
-    },
+    position: [-389, 54],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -377,
-      y: 54,
-    },
+    position: [-377, 54],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -373,
-      y: 53,
-    },
+    position: [-373, 53],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -259,
-      y: 55,
-    },
+    position: [-259, 55],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -124,
-      y: 39,
-    },
+    position: [-124, 39],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -61,
-      y: 32,
-    },
+    position: [-61, 32],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -11,
-      y: 21,
-    },
+    position: [-11, 21],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -11,
-      y: 21,
-    },
+    position: [-11, 21],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -11,
-      y: 21,
-    },
+    position: [-11, 21],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -11,
-      y: 21,
-    },
+    position: [-11, 21],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -11,
-      y: 21,
-    },
+    position: [-11, 21],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -11,
-      y: 21,
-    },
+    position: [-11, 21],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -11,
-      y: 21,
-    },
+    position: [-11, 21],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -11,
-      y: 21,
-    },
+    position: [-11, 21],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -11,
-      y: 21,
-    },
+    position: [-11, 21],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -11,
-      y: 21,
-    },
+    position: [-11, 21],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -11,
-      y: 21,
-    },
+    position: [-11, 21],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -11,
-      y: 21,
-    },
+    position: [-11, 21],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -11,
-      y: 21,
-    },
+    position: [-11, 21],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -12,
-      y: 21,
-    },
+    position: [-12, 21],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -12,
-      y: 21,
-    },
+    position: [-12, 21],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -13,
-      y: 21,
-    },
+    position: [-13, 21],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -15,
-      y: 21,
-    },
+    position: [-15, 21],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -15,
-      y: 22,
-    },
+    position: [-15, 22],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -15,
-      y: 22,
-    },
+    position: [-15, 22],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -15,
-      y: 22,
-    },
+    position: [-15, 22],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -15,
-      y: 22,
-    },
+    position: [-15, 22],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -15,
-      y: 22,
-    },
+    position: [-15, 22],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -17,
-      y: 22,
-    },
+    position: [-17, 22],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -17,
-      y: 22,
-    },
+    position: [-17, 22],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -17,
-      y: 22,
-    },
+    position: [-17, 22],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -17,
-      y: 22,
-    },
+    position: [-17, 22],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -17,
-      y: 22,
-    },
+    position: [-17, 22],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -17,
-      y: 22,
-    },
+    position: [-17, 22],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -17,
-      y: 22,
-    },
+    position: [-17, 22],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -18,
-      y: 22,
-    },
+    position: [-18, 22],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -21,
-      y: 21,
-    },
+    position: [-21, 21],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -23,
-      y: 21,
-    },
+    position: [-23, 21],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -38,
-      y: 16,
-    },
+    position: [-38, 16],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -39,
-      y: 15,
-    },
+    position: [-39, 15],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -40,
-      y: 13,
-    },
+    position: [-40, 13],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -40,
-      y: 13,
-    },
+    position: [-40, 13],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -41,
-      y: -4,
-    },
+    position: [-41, -4],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -39,
-      y: -11,
-    },
+    position: [-39, -11],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -27,
-      y: -37,
-    },
+    position: [-27, -37],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -18,
-      y: -39,
-    },
+    position: [-18, -39],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -8,
-      y: -49,
-    },
+    position: [-8, -49],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -8,
-      y: -49,
-    },
+    position: [-8, -49],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: 5,
-      y: -54,
-    },
+    position: [5, -54],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: 5,
-      y: -55,
-    },
+    position: [5, -55],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: 6,
-      y: -55,
-    },
+    position: [6, -55],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: 10,
-      y: -55,
-    },
+    position: [10, -55],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -32,
-      y: -82,
-    },
+    position: [-32, -82],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -42,
-      y: -82,
-    },
+    position: [-42, -82],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -109,
-      y: -95,
-    },
+    position: [-109, -95],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -126,
-      y: -97,
-    },
+    position: [-126, -97],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -131,
-      y: -201,
-    },
+    position: [-131, -201],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -90,
-      y: -283,
-    },
+    position: [-90, -283],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: 27,
-      y: -338,
-    },
+    position: [27, -338],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: 134,
-      y: -279,
-    },
+    position: [134, -279],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: 134,
-      y: -261,
-    },
+    position: [134, -261],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: 123,
-      y: -74,
-    },
+    position: [123, -74],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: 66,
-      y: 108,
-    },
+    position: [66, 108],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: 57,
-      y: 119,
-    },
+    position: [57, 119],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -154,
-      y: 47,
-    },
+    position: [-154, 47],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -360,
-      y: -214,
-    },
+    position: [-360, -214],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -22,
-      y: -234,
-    },
+    position: [-22, -234],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -22,
-      y: -234,
-    },
+    position: [-22, -234],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -4,
-      y: 266,
-    },
+    position: [-4, 266],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -2,
-      y: 273,
-    },
+    position: [-2, 273],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: 318,
-      y: -108,
-    },
+    position: [318, -108],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -57,
-      y: -139,
-    },
+    position: [-57, -139],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -471,
-      y: -93,
-    },
+    position: [-471, -93],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -557,
-      y: -329,
-    },
+    position: [-557, -329],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: 94,
-      y: -324,
-    },
+    position: [94, -324],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: 438,
-      y: 253,
-    },
+    position: [438, 253],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -374,
-      y: -45,
-    },
+    position: [-374, -45],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -374,
-      y: -45,
-    },
+    position: [-374, -45],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: 34,
-      y: -21,
-    },
+    position: [34, -21],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: 33,
-      y: -21,
-    },
+    position: [33, -21],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -18,
-      y: -266,
-    },
+    position: [-18, -266],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -68,
-      y: -251,
-    },
+    position: [-68, -251],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -259,
-      y: 64,
-    },
+    position: [-259, 64],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -194,
-      y: -318,
-    },
+    position: [-194, -318],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: 319,
-      y: -280,
-    },
+    position: [319, -280],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -111,
-      y: 252,
-    },
+    position: [-111, 252],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -41,
-      y: 196,
-    },
+    position: [-41, 196],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -17,
-      y: 172,
-    },
+    position: [-17, 172],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: 38,
-      y: 111,
-    },
+    position: [38, 111],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: 38,
-      y: 106,
-    },
+    position: [38, 106],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -52,
-      y: 79,
-    },
+    position: [-52, 79],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -95,
-      y: 76,
-    },
+    position: [-95, 76],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -312,
-      y: 100,
-    },
+    position: [-312, 100],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -319,
-      y: 100,
-    },
+    position: [-319, 100],
   },
   {
     type: "TOUCH_UP",
     id: "REPLAY",
-    position: {
-      x: -319,
-      y: 100,
-    },
+    position: [-319, 100],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -319,
-      y: 100,
-    },
+    position: [-319, 100],
   },
   {
     type: "TOUCH_DOWN",
     id: "REPLAY",
-    position: {
-      x: -319,
-      y: 100,
-    },
+    position: [-319, 100],
   },
 ];

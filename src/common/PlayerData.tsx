@@ -1,20 +1,22 @@
+import { V2 } from "./v2";
+
 export interface Transform {
-  position: { x: number; y: number };
+  readonly position: V2;
   rotation: number;
 }
-export const vw = window.innerWidth / 100;
+
 export interface IdleData {
   state: "IDLE";
-  idleTarget: { x: number; y: number };
+  readonly idleTarget: V2;
 }
 export type TouchingData = {
   state: "TOUCHING";
-  touchPosition: { x: number; y: number };
+  readonly touchPosition: V2;
 };
 export type PeersistentData = {
   id: string;
   transform: Transform;
   rotationDirection: "CLOCKWISE" | "ANTICLOCKWISE";
 };
-type StateDependentData = IdleData | TouchingData;
+export type StateDependentData = IdleData | TouchingData;
 export type PlayerData = PeersistentData & StateDependentData;
